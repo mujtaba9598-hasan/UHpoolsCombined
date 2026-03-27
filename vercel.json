@@ -2,5 +2,5 @@
   "buildCommand": "",
   "installCommand": "",
   "framework": null,
-  "outputDirectory": "."
+  "outputDirectory": "public"
 }
