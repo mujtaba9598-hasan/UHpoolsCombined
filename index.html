@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UH Pools & Gardens | Choose Your Design</title>
+  <link rel="icon" href="uh-logo.png">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -70,8 +71,9 @@
     .card-preview {
       width: 100%;
       aspect-ratio: 16/10;
-      object-fit: cover;
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       border-bottom: 1px solid #222;
     }
 
@@ -118,46 +120,54 @@
     .v1-cta { color: #14b8a6; }
     .v2-cta { color: #818cf8; }
 
-    .footer {
-      margin-top: 3rem;
-      color: #555;
-      font-size: 0.8rem;
-      text-align: center;
-    }
-
-    .footer a { color: #888; text-decoration: none; }
-    .footer a:hover { color: #fff; }
-
-    /* Color bars on top of cards */
     .card::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
+      top: 0; left: 0; right: 0;
       height: 3px;
     }
     .card-v1::before { background: linear-gradient(90deg, #0d9488, #06b6d4); }
     .card-v2::before { background: linear-gradient(90deg, #2563EB, #F43F5E); }
 
-    /* Gradient text */
     .gradient-text {
       background: linear-gradient(135deg, #14b8a6, #2563EB, #7C3AED);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
+
+    .footer {
+      margin-top: 3rem;
+      color: #555;
+      font-size: 0.8rem;
+      text-align: center;
+    }
+    .footer a { color: #888; text-decoration: none; }
+    .footer a:hover { color: #fff; }
+
+    .note {
+      margin-top: 2rem;
+      padding: 1rem 1.5rem;
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 12px;
+      color: #666;
+      font-size: 0.8rem;
+      max-width: 500px;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
 
-  <img src="v1/images/uh-logo.png" alt="UH Pools & Gardens" class="logo">
+  <img src="uh-logo.png" alt="UH Pools & Gardens" class="logo">
   <h1><span class="gradient-text">UH Pools & Gardens</span></h1>
-  <p class="subtitle">Two design options for your review. Click either card to explore the full website.</p>
+  <p class="subtitle">Two design concepts for your review. Click either card to explore the full website.</p>
 
   <div class="cards">
-    <a href="v1/index.html" class="card card-v1">
-      <div style="width:100%;aspect-ratio:16/10;background:linear-gradient(135deg,#f0fdf9,#e0f2fe);display:flex;align-items:center;justify-content:center;border-bottom:1px solid #222;">
+    <!-- VERSION 1 -->
+    <a href="https://unique-hills-pools.vercel.app" target="_blank" rel="noopener" class="card card-v1" id="card-v1">
+      <div class="card-preview" style="background:linear-gradient(135deg,#f0fdf9,#e0f2fe);">
         <div style="text-align:center;padding:2rem;">
           <div style="font-size:3rem;margin-bottom:0.5rem;">🌊</div>
           <div style="font-size:1.2rem;font-weight:800;color:#0d9488;">Teal Smoke Theme</div>
@@ -167,13 +177,14 @@
       <div class="card-body">
         <span class="card-badge v1-badge">Version 1</span>
         <h2>Classic Elegance</h2>
-        <p>Teal smoke background, frosted glass navbar, floating fog animations, clean and professional.</p>
+        <p>Teal smoke background, frosted glass navbar, floating fog animations, clean and professional feel.</p>
         <span class="card-cta v1-cta">Explore Version 1 &rarr;</span>
       </div>
     </a>
 
-    <a href="v2/index.html" class="card card-v2">
-      <div style="width:100%;aspect-ratio:16/10;background:linear-gradient(135deg,#eff6ff,#f5f3ff);display:flex;align-items:center;justify-content:center;border-bottom:1px solid #222;">
+    <!-- VERSION 2 -->
+    <a href="https://unique-hills-pools2.vercel.app" target="_blank" rel="noopener" class="card card-v2" id="card-v2">
+      <div class="card-preview" style="background:linear-gradient(135deg,#eff6ff,#f5f3ff);">
         <div style="text-align:center;padding:2rem;">
           <div style="font-size:3rem;margin-bottom:0.5rem;">🎨</div>
           <div style="font-size:1.2rem;font-weight:800;color:#2563EB;">Bold Vibrant Theme</div>
@@ -187,6 +198,10 @@
         <span class="card-cta v2-cta">Explore Version 2 &rarr;</span>
       </div>
     </a>
+  </div>
+
+  <div class="note">
+    After reviewing both versions, please let us know which design you prefer. We will then finalize and deploy it to your live domain.
   </div>
 
   <div class="footer">
